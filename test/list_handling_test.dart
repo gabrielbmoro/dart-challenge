@@ -25,4 +25,12 @@ void main() {
 
     expect(result, [1, 2, 6, 8]);
   });
+
+  test('ordena _ [3,1,4,2]', () {
+    final input = [3, 1, 4, 2];
+    final result = ordena(input);
+
+    expect(input, [3, 1, 4, 2]);
+    expect(result, [1, 2, 3, 4]);
+  });
 }
