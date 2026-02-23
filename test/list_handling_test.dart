@@ -1,4 +1,5 @@
 import 'package:dart_challenge/list_handling.dart';
+import 'package:dart_challenge/person.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -32,5 +33,20 @@ void main() {
 
     expect(input, [3, 1, 4, 2]);
     expect(result, [1, 2, 3, 4]);
+  });
+
+  test('ordenaPorIdade _ [Person("Alice", 30), Person("Bob", 25)]', () {
+    final input = [Person("Alice", 30), Person("Bob", 25)];
+    final result = ordenaPorIdade(input);
+
+    expect(input[0].name, "Alice");
+    expect(input[0].age, 30);
+    expect(input[1].name, "Bob");
+    expect(input[1].age, 25);
+
+    expect(result[0].name, "Bob");
+    expect(result[0].age, 25);
+    expect(result[1].name, "Alice");
+    expect(result[1].age, 30);
   });
 }
